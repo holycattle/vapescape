@@ -1,0 +1,16 @@
+php5:
+  build: backend/
+  links:
+    - db:db
+  ports:
+    - "16000:80"
+  volumes:
+    - backend/magento:/root/vapescape  
+
+db:
+  image: mysql
+  
+  volumes_from:
+    - mysqlData
+  environment: 
+    MYSQL_ROOT_PASSWORD: vapescape
