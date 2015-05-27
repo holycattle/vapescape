@@ -41,6 +41,8 @@
 <body class="<?php echo $class; ?>">
 <nav id="top">
   <div class="container">
+    <?php echo $currency; ?>
+    <?php echo $language; ?>
     <div id="top-links" class="nav pull-right">
       <ul class="list-inline">
         <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
@@ -65,17 +67,27 @@
     </div>
   </div>
 </nav>
-
-<div id="logo">
-  <?php if ($logo) { ?>
-  <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
-  <?php } else { ?>
-  <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
-  <?php } ?>
-</div>
-
-<nav id="menu" class="navbar">
-  <div class="container">  
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <div id="logo">
+          <?php if ($logo) { ?>
+          <a href="<?php echo $home; ?>"><img src="<?php echo $logo; ?>" title="<?php echo $name; ?>" alt="<?php echo $name; ?>" class="img-responsive" /></a>
+          <?php } else { ?>
+          <h1><a href="<?php echo $home; ?>"><?php echo $name; ?></a></h1>
+          <?php } ?>
+        </div>
+      </div>
+      <div class="col-sm-5"><?php echo $search; ?>
+      </div>
+      <div class="col-sm-3"><?php echo $cart; ?></div>
+    </div>
+  </div>
+</header>
+<?php if ($categories) { ?>
+<div class="container">
+  <nav id="menu" class="navbar">
     <div class="navbar-header"><span id="category" class="visible-xs"><?php echo $text_category; ?></span>
       <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
     </div>
@@ -102,20 +114,6 @@
         <?php } ?>
       </ul>
     </div>
-  </div>
-</nav>
-<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        
-      </div>
-      <div class="col-sm-5"><?php echo $search; ?>
-      </div>
-      <div class="col-sm-3"><?php echo $cart; ?></div>
-    </div>
-  </div>
-</header>
-<?php if ($categories) { ?>
-
+  </nav>
+</div>
 <?php } ?>
