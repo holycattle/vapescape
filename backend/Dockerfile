@@ -18,7 +18,7 @@ RUN mkdir vapescape; chown -R www-data /vapescape && chgrp -R www-data /vapescap
 
 ADD config/php.ini /etc/php5/fpm/
 ADD config/default /etc/nginx/sites-available/
-ADD config/nginx.conf /etc/nginx
+ADD config/nginx.conf /etc/nginx/
 
 VOLUME ["backend/opencart/image"]
 
