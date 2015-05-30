@@ -43,7 +43,7 @@
   <?php if ($logged) { ?>
   <ul class="nav pull-right">
     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><span class="label label-danger pull-left"><?php echo $alerts; ?></span> <i class="fa fa-bell fa-lg"></i></a>
-      <ul class="dropdown-menu dropdown-menu-right alerts-dropdown">
+      <ul class="dropdown-menu alerts-dropdown">
         <li class="dropdown-header"><?php echo $text_order; ?></li>
         <li><a href="<?php echo $order_status; ?>" style="display: block; overflow: auto;"><span class="label label-warning pull-right"><?php echo $order_status_total; ?></span><?php echo $text_order_status; ?></a></li>
         <li><a href="<?php echo $complete_status; ?>"><span class="label label-success pull-right"><?php echo $complete_status_total; ?></span><?php echo $text_complete_status; ?></a></li>
