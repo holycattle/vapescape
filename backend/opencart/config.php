@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://kvnvelasco.com:16000/');
+define('HTTP_SERVER', 'http://vapescape.com.au/');
 
 // HTTPS
-define('HTTPS_SERVER', 'http://kvnvelasco.com:16000/');
+define('HTTPS_SERVER', 'http://vapescape.com.au/');
 
 // DIR
 define('DIR_APPLICATION', '/vapescape/catalog/');
