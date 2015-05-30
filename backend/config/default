@@ -5,7 +5,7 @@ server {
 	root /vapescape;
 	index index.php index.html index.htm;
   
-	server_name localhost;
+	server_name vapescape.com.au;
 
 	location / {
 		try_files $uri $uri/ =404;
