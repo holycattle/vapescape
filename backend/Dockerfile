@@ -20,4 +20,6 @@ ADD config/php.ini /etc/php5/fpm/
 ADD config/default /etc/nginx/sites-available/
 ADD config/nginx.conf /etc/nginx
 
+VOLUME ["backend/opencart/image"]
+
 CMD service php5-fpm start; nginx
