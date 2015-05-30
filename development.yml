@@ -3,9 +3,7 @@ php5:
   links:
     - db:db
   ports:
-    - "16000:80"
-  volumes:
-    - backend/opencart:/root/vapescape  
+    - "16000:80" 
 
 db:
   image: mysql
