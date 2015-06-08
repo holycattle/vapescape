@@ -1,4 +1,6 @@
 php5:
   build: backend/
   ports:
-    - "80:80"
+    - "80:80" 
+  volumes_from:
+    - vapeDatastore
