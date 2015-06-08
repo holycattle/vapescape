@@ -20,7 +20,7 @@ define('DIR_LOGS', '/vapescape/system/logs/');
 
 // DB
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', 'db');
+define('DB_HOSTNAME', '128.199.110.164');
 define('DB_USERNAME', 'vape');
 define('DB_PASSWORD', 'vapescape');
 define('DB_DATABASE', 'vapescape');

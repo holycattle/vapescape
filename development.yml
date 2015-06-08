@@ -1,14 +1,4 @@
 php5:
   build: backend/
-  links:
-    - db:db
   ports:
-    - "80:80" 
-
-db:
-  image: mysql
-  
-  volumes_from:
-    - mysqlData
-  environment: 
-    MYSQL_ROOT_PASSWORD: vapescape
+    - "80:80"
