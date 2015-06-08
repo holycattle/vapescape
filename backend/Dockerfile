@@ -1,7 +1,5 @@
 FROM ubuntu:14.04
 
-RUN echo "db 128.199.110.164" >> /etc/hosts
-
 RUN apt-get update && apt-get install -y nginx \
   php5 \
   php5-fpm \
