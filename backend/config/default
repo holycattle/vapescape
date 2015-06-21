@@ -25,7 +25,6 @@ server {
 
 server {
 	listen 8002 default_server;
-	listen [::]:8002 ipv6only=on;
 	
 	server_name denyAll;
 	
