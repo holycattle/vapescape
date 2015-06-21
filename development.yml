@@ -1,4 +1,4 @@
 php5:
   build: backend/
   ports:
-    - "80:80"
+    - "8002:8002"
