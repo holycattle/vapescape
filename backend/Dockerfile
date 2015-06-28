@@ -12,14 +12,13 @@ RUN apt-get update && apt-get install -y nginx \
 
 
 RUN php5enmod mcrypt
+RUN mkdir vapescape; 
 WORKDIR /vapescape
-ADD opencart .
-RUN mkdir vapescape; chown -R www-data /vapescape && chgrp -R www-data /vapescape
 
-ADD config/php.ini /etc/php5/fpm/
-ADD config/default /etc/nginx/sites-available/
-ADD config/nginx.conf /etc/nginx/
+ADD . .
 
-VOLUME ["/vapescape/backend/opencart/image", "/vapescape"]
+RUN chown -R www-data /vapescape && chgrp -R www-data /vapescape
+
+VOLUME ["/vapescape"]
 
 CMD service php5-fpm start; nginx

@@ -1,0 +1,9 @@
+php5:
+  build: backend/
+  ports:
+    - "8002:8002"
+  volumes:
+    - configs/ngx-production:/etc/nginx/sites-available/default
+  environment:
+    DB_HOST: "vapescape.com.au"
+    DB_PASS: "vapescape"

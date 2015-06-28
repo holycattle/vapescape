@@ -2,3 +2,16 @@ php5:
   build: backend/
   ports:
     - "8002:8002"
+  volumes:
+    - backend:/vapescape
+  environment:
+    DB_HOST: "192.168.59.103"
+    DB_PASS: "vapepass"
+  command: php -S 0.0.0.0:8002
+
+mysql:
+  image: mysql:5
+  ports:
+    - "3306:3306"
+  environment:
+    MYSQL_ROOT_PASSWORD: "developmentrootpass"
