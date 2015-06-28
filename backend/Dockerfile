@@ -19,6 +19,4 @@ ADD . .
 
 RUN chown -R www-data /vapescape && chgrp -R www-data /vapescape
 
-VOLUME ["/vapescape"]
-
 CMD service php5-fpm start; nginx
