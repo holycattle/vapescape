@@ -1,17 +1,26 @@
 php5:
-  build: backend/
+  build: app/
   ports:
     - "8002:8002"
   volumes:
-    - backend:/vapescape
+    - /app:/vapescape
   environment:
-    DB_HOST: "192.168.59.103"
+    DB_HOST: "localhost"
     DB_PASS: "vapepass"
+    DB_ROOT_PASS: "developmentrootpass"
   command: php -S 0.0.0.0:8002
 
 mysql:
-  image: mysql:5
+  image: mysql:5.6
   ports:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: "developmentrootpass"
+  
+importer:
+  image: mysql:5.6
+  volumes: 
+    - dbdump-vapescape-6-28-15.sql:/dbdump.sql
+  links:
+    - mysql
+  command: mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" vapescape < dump.sql
