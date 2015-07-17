@@ -3,13 +3,16 @@ php5:
   ports:
     - "8002:8002"
   volumes:
-    - /app:/vapescape
+    - app:/vapescape
   environment:
-    DB_HOST: "localhost"
-    DB_PASS: "vapepass"
-    DB_ROOT_PASS: "developmentrootpass"
+    MYSQL_VAPE_USERNAME: vape
+    MYSQL_VAPE_PASSWORD: vapescape
+    MYSQL_VAPE_DATABASE: vapescape
+    MYSQL_VAPE_DATABASE_PREFIX: dev_
     HTTP_SERVER: "http://192.168.59.103:8002/"
     HTTPS_SERVER: "http://192.168.59.103:8002/"
+  links:
+    - mysql:mysql
   command: php -S 0.0.0.0:8002
 
 mysql:

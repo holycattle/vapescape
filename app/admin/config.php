@@ -1,30 +1,30 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://192.168.59.103:8888/admin/');
-define('HTTP_CATALOG', 'http://192.168.59.103:8888/');
+define('HTTP_SERVER', getenv('HTTP_SERVER') + 'admin/');
+define('HTTP_CATALOG', getenv('HTTP_SERVER'));
 
 // HTTPS
-define('HTTPS_SERVER', 'http://192.168.59.103:8888/admin/');
-define('HTTPS_CATALOG', 'http://192.168.59.103:8888/');
+define('HTTPS_SERVER', getenv('HTTPS_SERVER') + 'admin/');
+define('HTTPS_CATALOG', getenv('HTTPS_SERVER'));
 
 // DIR
-define('DIR_APPLICATION', '/vape/admin/');
-define('DIR_SYSTEM', '/vape/system/');
-define('DIR_LANGUAGE', '/vape/admin/language/');
-define('DIR_TEMPLATE', '/vape/admin/view/template/');
-define('DIR_CONFIG', '/vape/system/config/');
-define('DIR_IMAGE', '/vape/image/');
-define('DIR_CACHE', '/vape/system/cache/');
-define('DIR_DOWNLOAD', '/vape/system/download/');
-define('DIR_UPLOAD', '/vape/system/upload/');
-define('DIR_LOGS', '/vape/system/logs/');
-define('DIR_MODIFICATION', '/vape/system/modification/');
-define('DIR_CATALOG', '/vape/catalog/');
+define('DIR_APPLICATION', '/vapescape/admin/');
+define('DIR_SYSTEM', '/vapescape/system/');
+define('DIR_LANGUAGE', '/vapescape/admin/language/');
+define('DIR_TEMPLATE', '/vapescape/admin/view/template/');
+define('DIR_CONFIG', '/vapescape/system/config/');
+define('DIR_IMAGE', '/vapescape/image/');
+define('DIR_CACHE', '/vapescape/system/cache/');
+define('DIR_DOWNLOAD', '/vapescape/system/download/');
+define('DIR_UPLOAD', '/vapescape/system/upload/');
+define('DIR_LOGS', '/vapescape/system/logs/');
+define('DIR_MODIFICATION', '/vapescape/system/modification/');
+define('DIR_CATALOG', '/vapescape/catalog/');
 
 // DB
 define('DB_DRIVER', 'mpdo');
-define('DB_HOSTNAME', 'vapescape.com.au');
-define('DB_USERNAME', 'vape');
-define('DB_PASSWORD', 'vapescape');
-define('DB_DATABASE', 'vapescape');
-define('DB_PREFIX', 'dev_');
+define('DB_HOSTNAME', getenv('MYSQL_PORT_3306_TCP_ADDR'));
+define('DB_USERNAME', getenv('MYSQL_VAPE_USERNAME'));
+define('DB_PASSWORD', getenv('MYSQL_VAPE_PASSWORD'));
+define('DB_DATABASE', getenv('MYSQL_VAPE_DATABASE'));
+define('DB_PREFIX', getenv('MYSQL_VAPE_DATABASE_PREFIX'));

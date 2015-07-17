@@ -3,12 +3,13 @@ php5:
   ports:
     - "8002:8002"
   volumes:
-    - backend/admin/view:/vapescape/admin/view
-    - backend/catalog/view:/vapescape/catalog/view
     - configs/ngx-production:/etc/nginx/sites-available/default
     - configs/nginx.conf:/etc/nginx/nginx.conf
   environment:
-    DB_HOST: vapescape.com.au
-    DB_PASS: vapescape
+    MYSQL_PORT_3306_TCP_ADDR: vapescape.com.au
+    MYSQL_VAPE_USERNAME: vape
+    MYSQL_VAPE_PASSWORD: vapescape
+    MYSQL_VAPE_DATABASE: vapescape
+    MYSQL_VAPE_DATABASE_PREFIX: oc_
     HTTP_SERVER: http://vapescape.com.au/
     HTTPS_SERVER: http://vapescape.com.au/
