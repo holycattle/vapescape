@@ -16,3 +16,11 @@ ping.path = /ping
 ping.response = pong
 
 env[MYSQL_PORT_3306_TCP_ADDR] = vapescape.com.au
+env[MYSQL_VAPE_USERNAME] = vape
+env[MYSQL_VAPE_PASSWORD] = vapescape
+env[MYSQL_VAPE_DATABASE] = vapescape
+env[MYSQL_VAPE_DATABASE_PREFIX] = oc_
+env[HTTP_SERVER] = http://vapescape.com.au/
+env[HTTPS_SERVER] = http://vapescape.com.au/
+env[HTTP_ADMIN_SERVER] = http://vapescape.com.au/admin/
+env[HTTPS_ADMIN_SERVER] = http://vapescape.com.au/admin/
