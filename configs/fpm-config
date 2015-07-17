@@ -15,6 +15,4 @@ pm.status_path = /fpm-see-status
 ping.path = /ping
 ping.response = pong
 
-access.log = /var/log/fpm/$pool.access.log
 php_flag[clear_env] = no
-
