@@ -1,0 +1,5 @@
+[vapescape]
+user = www-data
+group = www-data
+listen = /var/run/php5-fpm.sock
+clear_env = no
