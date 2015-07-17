@@ -1,5 +1,20 @@
-[vapescape]
+[vape]
+
 user = www-data
 group = www-data
-listen = /var/run/php5-fpm.sock
-clear_env = no
+
+listen = /var/run/vape-fpm.sock
+
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3
+
+pm.status_path = /fpm-see-status
+ping.path = /ping
+ping.response = pong
+
+access.log = /var/log/fpm/$pool.access.log
+php_flag[clear_env] = no
+
