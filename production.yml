@@ -13,3 +13,5 @@ php5:
     MYSQL_VAPE_DATABASE_PREFIX: oc_
     HTTP_SERVER: http://vapescape.com.au/
     HTTPS_SERVER: http://vapescape.com.au/
+    HTTP_ADMIN_SERVER: http://vapescape.com.au/admin/
+    HTTPS_ADMIN_SERVER: http://vapescape.com.au/admin/

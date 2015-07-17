@@ -18,5 +18,6 @@ WORKDIR /vapescape
 ADD . .
 
 RUN chown -R www-data /vapescape && chgrp -R www-data /vapescape
+RUN echo clear_env = no >> /etc/php5/fpm/php-fpm.conf
 
 CMD service php5-fpm start; nginx

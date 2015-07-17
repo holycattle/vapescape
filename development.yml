@@ -9,8 +9,10 @@ php5:
     MYSQL_VAPE_PASSWORD: vapescape
     MYSQL_VAPE_DATABASE: vapescape
     MYSQL_VAPE_DATABASE_PREFIX: dev_
-    HTTP_SERVER: "http://192.168.59.103:8002/"
-    HTTPS_SERVER: "http://192.168.59.103:8002/"
+    HTTP_SERVER: http://192.168.59.103:8002/
+    HTTPS_SERVER: http://192.168.59.103:8002/
+    HTTP_ADMIN_SERVER: http://192.168.59.103:8002/admin/
+    HTTPS_ADMIN_SERVER: http://192.168.59.103:8002/admin/
   links:
     - mysql:mysql
   command: php -S 0.0.0.0:8002

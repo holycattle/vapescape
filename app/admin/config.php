@@ -1,10 +1,10 @@
 <?php
 // HTTP
-define('HTTP_SERVER', getenv('HTTP_SERVER') + 'admin/');
+define('HTTP_SERVER', getenv('HTTP_ADMIN_SERVER'));
 define('HTTP_CATALOG', getenv('HTTP_SERVER'));
 
 // HTTPS
-define('HTTPS_SERVER', getenv('HTTPS_SERVER') + 'admin/');
+define('HTTPS_SERVER', getenv('HTTPS_ADMIN_SERVER'));
 define('HTTPS_CATALOG', getenv('HTTPS_SERVER'));
 
 // DIR
