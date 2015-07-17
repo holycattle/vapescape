@@ -3,7 +3,7 @@
 define('HTTP_SERVER', getenv("HTTP_SERVER"));
 
 // HTTPS
-define('HTTPS_SERVER', getenv("HTTPS_SERVER")));
+define('HTTPS_SERVER', getenv("HTTPS_SERVER"));
 
 // DIR
 define('DIR_APPLICATION', '/vapescape/catalog/');
