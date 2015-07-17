@@ -15,4 +15,4 @@ pm.status_path = /fpm-see-status
 ping.path = /ping
 ping.response = pong
 
-php_flag[clear_env] = no
+env[MYSQL_PORT_3306_TCP_ADDR] = vapescape.com.au
