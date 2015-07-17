@@ -8,8 +8,8 @@ php5:
     DB_HOST: "localhost"
     DB_PASS: "vapepass"
     DB_ROOT_PASS: "developmentrootpass"
-    HTTP_SERVER: "http://192.168.59.103:8002"
-    HTTPS_SERVER: "http://192.168.59.103:8002"
+    HTTP_SERVER: "http://192.168.59.103:8002/"
+    HTTPS_SERVER: "http://192.168.59.103:8002/"
   command: php -S 0.0.0.0:8002
 
 mysql:

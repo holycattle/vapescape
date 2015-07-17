@@ -19,7 +19,7 @@ define('DIR_MODIFICATION', '/vapescape/system/modification/');
 define('DIR_LOGS', '/vapescape/system/logs/');
 
 // DB
-define('DB_DRIVER', 'mysql');
+define('DB_DRIVER', 'mpdo');
 define('DB_HOSTNAME', getenv("DB_HOST"));
 define('DB_USERNAME', 'vape');
 define('DB_PASSWORD', getenv("DB_PASS"));
