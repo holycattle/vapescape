@@ -1,7 +1,7 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://192.168.59.103:8002/admin/');
-define('HTTP_CATALOG', 'http://192.168.59.103:8002/');
+define('HTTP_SERVER', getenv("HTTP_SERVER") + "admin/");
+define('HTTP_CATALOG', getenv("HTTP_SERVER"));
 
 // HTTPS
 define('HTTPS_SERVER', 'http://192.168.59.103:8002/admin/');

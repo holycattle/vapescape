@@ -1,9 +1,9 @@
 <?php
 // HTTP
-define('HTTP_SERVER', 'http://192.168.59.103:8002/');
+define('HTTP_SERVER', getenv("HTTP_SERVER"));
 
 // HTTPS
-define('HTTPS_SERVER', 'http://192.168.59.103:8002/');
+define('HTTPS_SERVER', getenv("HTTPS_SERVER")));
 
 // DIR
 define('DIR_APPLICATION', '/vapescape/catalog/');

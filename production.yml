@@ -10,3 +10,5 @@ php5:
   environment:
     DB_HOST: "vapescape.com.au"
     DB_PASS: "vapescape"
+    HTTP_SERVER: "http://vapescape.com.au"
+    HTTPS_SERVER: "http://vapescape.com.au"
