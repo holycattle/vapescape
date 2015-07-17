@@ -23,7 +23,7 @@ define('DIR_CATALOG', '/vapescape/catalog/');
 
 // DB
 define('DB_DRIVER', 'mpdo');
-define('DB_HOSTNAME', getenv("DBHOST"));
+define('DB_HOSTNAME', getenv("DB_HOST"));
 define('DB_USERNAME', 'vape');
 define('DB_PASSWORD', getenv("DB_PASS"));
 define('DB_DATABASE', 'vapescape');

@@ -18,11 +18,3 @@ mysql:
     - "3306:3306"
   environment:
     MYSQL_ROOT_PASSWORD: "developmentrootpass"
-  
-importer:
-  image: mysql:5.6
-  volumes: 
-    - dbdump-vapescape-6-28-15.sql:/dbdump.sql
-  links:
-    - mysql
-  command: mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD" vapescape < dump.sql
