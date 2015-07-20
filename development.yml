@@ -3,19 +3,11 @@ php5:
   ports:
     - "8002:8002"
   volumes:
-    - app:/vapescape
-  environment:
-    MYSQL_VAPE_USERNAME: vape
-    MYSQL_VAPE_PASSWORD: vapescape
-    MYSQL_VAPE_DATABASE: vapescape
-    MYSQL_VAPE_DATABASE_PREFIX: dev_
-    HTTP_SERVER: http://192.168.59.103:8002/
-    HTTPS_SERVER: http://192.168.59.103:8002/
-    HTTP_ADMIN_SERVER: http://192.168.59.103:8002/admin/
-    HTTPS_ADMIN_SERVER: http://192.168.59.103:8002/admin/
-  links:
-    - mysql:mysql
-  command: php -S 0.0.0.0:8002
+    - app/catalog/view:/vapescape/catalog/view
+    - app/admin/view:/vapescape/admin/view
+    - configs/ngx-development:/etc/nginx/sites-available/default
+    - configs/nginx.conf:/etc/nginx/nginx.conf
+    - configs/fpm-config-dev:/etc/php5/fpm/pool.d/www.conf
 
 mysql:
   image: mysql:5.6

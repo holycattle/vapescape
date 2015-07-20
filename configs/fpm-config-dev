@@ -1,0 +1,26 @@
+[vape]
+
+user = www-data
+group = www-data
+
+listen = /var/run/vape-fpm.sock
+
+pm = dynamic
+pm.max_children = 12
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 5
+
+
+php_admin_value[open_basedir] = /vapescape
+
+env[MYSQL_PORT_3306_TCP_ADDR] = 192.168.59.103
+env[MYSQL_VAPE_USERNAME] = vape
+env[MYSQL_VAPE_PASSWORD] = vapescape
+env[MYSQL_VAPE_DATABASE] = vapescape
+env[MYSQL_VAPE_DATABASE_PREFIX] = dev_
+
+env[HTTP_SERVER] = http://192.168.59.103:8002/
+env[HTTPS_SERVER] = http://192.168.59.103:8002/
+env[HTTP_ADMIN_SERVER] = http://192.168.59.103:8002/admin/
+env[HTTPS_ADMIN_SERVER] = http://192.168.59.103:8002/admin/
