@@ -18,4 +18,11 @@ WORKDIR /vapescape
 
 COPY . .
 
-CMD chown -vR www-data:www-data /vapescape;ls -laF; service php5-fpm start; nginx
+
+
+# Setup logging files and permissions
+# VOLUME ["/var/log"]
+
+RUN chown -vR www-data:www-data /vapescape && chmod -vR 777 /vapescape
+
+CMD service php5-fpm start; nginx

@@ -1,7 +1,7 @@
 [vape]
 
-user = www-data
-group = www-data
+user = 1000
+group = staff
 
 listen = /var/run/vape-fpm.sock
 
@@ -11,8 +11,6 @@ pm.start_servers = 2
 pm.min_spare_servers = 1
 pm.max_spare_servers = 5
 
-
-php_admin_value[open_basedir] = /vapescape
 
 env[MYSQL_PORT_3306_TCP_ADDR] = 192.168.59.103
 env[MYSQL_VAPE_USERNAME] = vape
